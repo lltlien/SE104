@@ -29,10 +29,15 @@ function renderReceipt(buyList) {
   const $receipt = document.getElementById("receipt-book-list");
   $receipt.innerHTML = "";
 
+  let totalPrice = 0;
   buyList.forEach((item) => {
     console.log(item);
     $receipt.appendChild(getRow(item));
+    totalPrice += item.num * item.price;
   });
+
+  const $totalPrice = document.getElementById("receipt-total-cost");
+  $totalPrice.innerText = `${totalPrice}`;
 }
 
 export { renderReceipt };
