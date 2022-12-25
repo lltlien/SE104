@@ -80,7 +80,6 @@ const bookList = [
 ];
 const inputList = [];
 bookList.forEach((item) => {
-  console.log(item);
   const tmp = getRow(item);
   $bookList.appendChild(tmp.$tag);
   inputList.push({ tag: tmp.$input, ...item, num: tmp.quantity });
@@ -100,6 +99,7 @@ $btnBuyBooks.addEventListener("click", () => {
     buyList.push({
       ...x,
       num: num,
+      money: num * x.price,
     });
   }
 

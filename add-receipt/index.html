@@ -16,8 +16,7 @@
   <h2>Thông tin khách hàng</h2>
   <div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-      data-bs-target="#chooseCustomerModal">
+    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#chooseCustomerModal">
       Chọn khách hàng
     </button>
 
@@ -121,16 +120,16 @@
         </table>
       </div>
       <div>
-        <div class="d-flex justify-content-end">Tổng tiền:<span id="receipt-total-cost">0</span> <span>VNĐ</span></div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Số tiền</span>
-          <input type="number" class="form-control" aria-label="money" aria-describedby="basic-addon1">
+          <input id="receipt-money-field" type="number" class="form-control" aria-label="money"
+            aria-describedby="basic-addon1">
           <span class="input-group-text" id="basic-addon1">VNĐ</span>
         </div>
         <div class="d-flex justify-content-center">
           <!-- <button type="submit">Thanh toán</button> -->
-          
-          <button class="btn btn-success" type="submit">Tạo hoá đơn</button>
+
+          <button class="btn btn-success" type="submit" id="btn-create-receipt">Tạo hoá đơn</button>
         </div>
       </div>
     </div>
